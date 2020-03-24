@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <!-- 좋아요 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        //좋아요 이미지
+        <Button
+            android:id="@+id/likeButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/thumb_up_selector" />
+
+        //좋아요 카운트
+        <TextView
+            android:id="@+id/likeCountView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="1"
+            android:textSize="28dp"
+            android:textStyle="bold" />
+
+        //싫어요 이미지
+        <Button
+            android:id="@+id/dislikeButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/thumb_down_selector" />
+
+        //싫어요 카운트
+        <TextView
+            android:id="@+id/dislikeCountView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="1"
+            android:textSize="28dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- 한줄평  -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <!--  한줄평 Top-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="한줄평"
+                android:layout_weight="1"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:padding="4dp"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:padding="4dp">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_review_selected" />
+
+                <!--<Button
+                    android:id="@+id/listViewButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:textColor="#FF9100"
+                    android:background="#ffffff"
+                    android:text="작성하기"/>-->
+
+                <TextView
+                    android:id="@+id/listViewButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="작성하기"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:textColor="#FF9100"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        //작성된 한줄평 리스트 뷰
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </ListView>
+
+    </LinearLayout>
+
+    <!-- 모아보기 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#9C27B0"
+        android:orientation="horizontal"
+        android:padding="2dp">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="모두 보기"
+            android:textSize="18dp"
+            android:background="#ffffff"
+            />
+    </LinearLayout>
+
+</LinearLayout>
